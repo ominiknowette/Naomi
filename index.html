@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naomi, in case this helps me say it better</title>
+  <meta
+    name="description"
+    content="A simple romantic one-page site for Naomi with a letter, honest reasons, and a playful final reveal."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-glow page-glow-left" aria-hidden="true"></div>
+  <div class="page-glow page-glow-right" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="hero shell">
+    <nav class="topline" aria-label="Page intro">
+      <span class="badge">for Naomi</span>
+      <div class="topline-meta">
+        <span class="topline-copy">something small, but real</span>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          type="button"
+          aria-label="Open Naomi media catalogue"
+          aria-controls="media-drawer"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero-layout">
+      <section class="hero-copy" data-reveal>
+        <p class="eyebrow">A little confession</p>
+        <h1>I made this because I like you, and I wanted to say it properly.</h1>
+        <p class="lede">
+          I know this is a bit extra, but you have been on my mind a lot, and a plain text message
+          just did not feel like enough.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#letter">Read this</a>
+          <a class="button button-secondary" href="#reasons">Why I like you</a>
+        </div>
+      </section>
+
+      <aside class="hero-card" data-reveal>
+        <p class="card-label">Just being honest</p>
+        <h2 id="rotating-line">You have been on my mind a lot lately.</h2>
+        <p class="card-copy">
+          This page is really just me saying what I have been meaning to say, only in a nicer way.
+        </p>
+        <div class="mini-grid">
+          <article>
+            <span class="mini-title">Mood</span>
+            <strong>Simple and honest</strong>
+          </article>
+          <article>
+            <span class="mini-title">Result</span>
+            <strong>I like you. A lot.</strong>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <div id="media-overlay" class="media-overlay" hidden></div>
+  <aside id="media-drawer" class="media-drawer" aria-hidden="true" aria-label="Naomi media catalogue">
+    <div class="drawer-head">
+      <div>
+        <p class="eyebrow">Naomi archive</p>
+        <h2>Her pictures and videos</h2>
+      </div>
+      <button id="close-menu" class="drawer-close" type="button" aria-label="Close media catalogue">Close</button>
+    </div>
+
+    <section class="media-section">
+      <div class="media-head">
+        <h3>Pictures</h3>
+        <span id="photo-count">0 items</span>
+      </div>
+      <div id="photo-grid" class="media-grid"></div>
+    </section>
+
+    <section class="media-section">
+      <div class="media-head">
+        <h3>Videos</h3>
+        <span id="video-count">0 items</span>
+      </div>
+      <div id="video-grid" class="media-grid"></div>
+    </section>
+  </aside>
+
+  <main>
+    <section class="shell section letter-section" id="letter">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">The letter</p>
+        <h2>Here is what I have been trying to say.</h2>
+      </div>
+
+      <div class="letter-card" data-reveal>
+        <div class="wax-seal" aria-hidden="true">N</div>
+        <div id="letter-body" class="letter-body">
+          <p>Naomi, my goddess, I really like you, and you stay on my mind a lot.</p>
+        </div>
+        <button id="letter-button" class="button button-primary" type="button">Keep reading</button>
+      </div>
+    </section>
+
+    <section class="shell section" id="reasons">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">Why I like you</p>
+        <h2>Not in a dramatic way. Just in a real way.</h2>
+      </div>
+
+      <div class="reasons-grid">
+        <article class="reason-card" data-reveal>
+          <span class="reason-number">01</span>
+          <h3>You are easy to be around.</h3>
+          <p>Nothing feels forced with you. Talking to you feels natural, and that means a lot to me.</p>
+        </article>
+
+        <article class="reason-card" data-reveal>
+          <span class="reason-number">02</span>
+          <h3>You stay in my head after we talk.</h3>
+          <p>Even small moments with you somehow end up meaning more than they should.</p>
+        </article>
+
+        <article class="reason-card" data-reveal>
+          <span class="reason-number">03</span>
+          <h3>You have a way about you.</h3>
+          <p>I do not even know how to explain it perfectly. You just have this warmth that pulls me in.</p>
+        </article>
+
+        <article class="reason-card" data-reveal>
+          <span class="reason-number">04</span>
+          <h3>You make me want to try.</h3>
+          <p>You feel like someone worth being intentional about, not just someone to casually admire.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section moments-section" id="moments">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">A few honest thoughts</p>
+        <h2>This is basically what it comes down to.</h2>
+      </div>
+
+      <div class="moments-layout">
+        <article class="moment-card wide" data-reveal>
+          <p class="moment-tag">Main point</p>
+          <h3>Out of everybody, you are the one I keep noticing.</h3>
+          <p>I could dress that up in nicer words, but that is really it.</p>
+        </article>
+
+        <article class="moment-card" data-reveal>
+          <p class="moment-tag">Also true</p>
+          <h3>I feel more like myself with you.</h3>
+          <p>I do not have to force anything, and I like that version of me.</p>
+        </article>
+
+        <article class="moment-card" data-reveal>
+          <p class="moment-tag">And yes</p>
+          <h3>Your smile does make things worse for me.</h3>
+          <p>In the best way, obviously.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section promises-section" id="promises">
+      <div class="section-heading" data-reveal>
+        <p class="eyebrow">What I mean by this</p>
+        <h2>I am not trying to be flashy. I mean this seriously.</h2>
+      </div>
+
+      <div class="promise-list">
+        <article class="promise-item" data-reveal>
+          <span>01</span>
+          <p>I would pay attention to the small things, because that is how you show someone they matter.</p>
+        </article>
+        <article class="promise-item" data-reveal>
+          <span>02</span>
+          <p>I would be kind with your heart and not treat this like a game.</p>
+        </article>
+        <article class="promise-item" data-reveal>
+          <span>03</span>
+          <p>I would bring honesty, effort, and the kind of consistency that actually means something.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="shell section final-section" id="question">
+      <div class="final-card" data-reveal>
+        <p class="eyebrow">One last thing</p>
+        <h2 id="final-title">Naomi, my goddess, will you be my girlfriend?</h2>
+        <p id="final-copy">
+          That is the real question behind every part of this page. I like you deeply, and I want
+          to call you mine in the sweetest, most honest way.
+        </p>
+        <blockquote class="question-poem">
+          "Your smile is the kind that softens whole rooms.<br>
+          Your face is trouble for anybody trying to stay calm.<br>
+          You are cute in the easiest, sweetest way,<br>
+          and somehow every little thing about you keeps pulling me back."
+        </blockquote>
+
+        <div id="answer-zone" class="answer-zone">
+          <button id="yes-button" class="button button-primary big-button" type="button">Yes</button>
+          <button id="no-button" class="button button-secondary big-button ghost-button" type="button">No</button>
+        </div>
+
+        <p id="response-note" class="tiny-note">You can still press no. I just might complain a little.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="celebration" class="celebration" aria-hidden="true">
+    <div id="spark-field" class="spark-field"></div>
+    <div class="celebration-card">
+      <p class="eyebrow">Okay, wow</p>
+      <h2>You just made my day.</h2>
+      <p>I was hoping this would work, but seeing it actually happen feels even better.</p>
+      <button id="close-celebration" class="button button-secondary" type="button">Read it again</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
