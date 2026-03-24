@@ -1,0 +1,13 @@
+{
+  "name": "naomi-romantic-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Romantic site for Naomi with Resend email notifications.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

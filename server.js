@@ -4,7 +4,7 @@ const path = require("path");
 
 const PORT = Number(process.env.PORT || 3000);
 const RESEND_API_KEY = process.env.RESEND_API_KEY;
-const FROM_EMAIL = process.env.FROM_EMAIL;
+const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
 const NOTIFY_TO_EMAIL = process.env.NOTIFY_TO_EMAIL;
 
 const rootDir = __dirname;
@@ -176,6 +176,15 @@ const serveFile = (requestPath, request, response) => {
 
 const server = http.createServer(async (request, response) => {
   const requestUrl = new URL(request.url, `http://${request.headers.host || "localhost"}`);
+
+  if (request.method === "GET" && requestUrl.pathname === "/api/health") {
+    sendJson(response, 200, {
+      ok: true,
+      runtime: "node",
+      resendConfigured: Boolean(RESEND_API_KEY && FROM_EMAIL && NOTIFY_TO_EMAIL)
+    });
+    return;
+  }
 
   if (request.method === "POST" && requestUrl.pathname === "/api/decision") {
     try {
